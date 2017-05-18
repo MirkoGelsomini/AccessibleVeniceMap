@@ -29,5 +29,6 @@
 	<allow-intent name="href" value="https://*/*"></allow-intent>
 	<!-- allow access to internet -->
 	<preference name="exit-on-suspend" value="false" />
+	<add key="IncompressibleAndroidFileTypes" value="jpg;jpeg;png;gif;wav;mp2;mp3;ogg;oga;ogv;aac;mpg;mpeg;mp4;m4a;m4v;3gp;3gpp;3g2;3gpp2;amr;awb;wma;mid;midi;smf;jet;rtttl;imy;xmf;wmv"/>
 
 </widget>

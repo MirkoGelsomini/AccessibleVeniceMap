@@ -25,7 +25,7 @@ function init() {
         requestFullScreen();
         
         var mp3=$(this).attr("alt");
-        path = "./sounds/" + mp3 + ".mp3";
+        path = "/android_asset/www/sounds/" + mp3 + ".mp3";
         console.log("esegui audio " + mp3 + ".mp3");
         
         if(window.currentfile==null || window.currentfile!=mp3){
