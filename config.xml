@@ -16,5 +16,7 @@
   <author href="https://build.phonegap.com" email="support@phonegap.com">
       Mirko Gelsomini
   </author>
+  
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 </widget>
