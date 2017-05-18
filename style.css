@@ -1,0 +1,27 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+img[usemap] {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+#loading{
+    
+    width:100%;
+    height:100%;
+    
+    background-image: url('images/copertina.jpg');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color:white;
+    
+    position:fixed;
+    z-index:999;
+}
