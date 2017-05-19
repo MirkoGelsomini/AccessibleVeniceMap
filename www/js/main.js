@@ -32,7 +32,7 @@ function init() {
         console.log("esegui audio " + mp3 + ".mp3");
 
         if (window.currentfile == null || window.currentfile != mp3) {
-            window.media.pause();
+            //window.media.pause();
             window.media=new Media(path,
                 // success callback
                 function () {
