@@ -21,6 +21,7 @@
 	<plugin name="cordova-plugin-whitelist" spec="1" />
 	<!--plugin whitelist-->
 	<plugin name="cordova-plugin-inappbrowser" spec="1.6.1" />
+    <plugin name="org.apache.cordova.media" />
 	<!--plugin inapp browser-->
 	<access name="origin" value="*" />
 	<allow-navigation name="href" value="*" />
@@ -28,7 +29,7 @@
 	<allow-intent name="href" value="http://*/*"></allow-intent>
 	<allow-intent name="href" value="https://*/*"></allow-intent>
 	<!-- allow access to internet -->
-	<preference name="exit-on-suspend" value="false" />
+	<preference name="exit-on-suspend" value="true" />
 	<add key="IncompressibleAndroidFileTypes" value="jpg;jpeg;png;gif;wav;mp2;mp3;ogg;oga;ogv;aac;mpg;mpeg;mp4;m4a;m4v;3gp;3gpp;3g2;3gpp2;amr;awb;wma;mid;midi;smf;jet;rtttl;imy;xmf;wmv"/>
 
 </widget>

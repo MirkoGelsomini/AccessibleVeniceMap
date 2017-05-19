@@ -1,9 +1,12 @@
 var player;
-var currentfile=null;
+var currentfile = null;
+var media;
 
 $(window).on("load", init());
 
 function init() {
+
+
 
     $('img[usemap]').rwdImageMaps();
     window.player = $("#player");
@@ -11,7 +14,7 @@ function init() {
     window.setTimeout(function () {
         $("#loading").hide();
     }, 10000);
-    
+
     $("body").on("click", function () {
         requestFullScreen();
     });
@@ -23,21 +26,33 @@ function init() {
 
     $("area").on("click", function () {
         requestFullScreen();
-        
-        var mp3=$(this).attr("alt");
-        path = "/android_asset/www/sounds/" + mp3 + ".mp3";
+
+        var mp3 = $(this).attr("alt");
+        path = "./sounds/" + mp3 + ".mp3";
         console.log("esegui audio " + mp3 + ".mp3");
-        
-        if(window.currentfile==null || window.currentfile!=mp3){
-            window.player.get(0).pause();
+
+        if (window.currentfile == null || window.currentfile != mp3) {
+            window.media.pause();
+            window.media=new Media(path,
+                // success callback
+                function () {
+                    console.log("playAudio():Audio Success");
+                },
+                // error callback
+                function (err) {
+                    console.log("playAudio():Audio Error: " + err);
+                }
+            );
+            /*window.player.get(0).pause();
             window.player.attr("src", path);
             window.player.get(0).play();
-            window.currentfile=mp3;
-        }else if(window.currentfile==mp3){
-            window.player.get(0).pause();
-            window.currentfile=null;
+            window.currentfile=mp3;*/
+        } else if (window.currentfile == mp3) {
+            //window.player.get(0).pause();
+            window.media.pause();
+            window.currentfile = null;
         }
-        
+
 
     });
 }
